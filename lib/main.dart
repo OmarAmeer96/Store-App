@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             headers: {
               'Accept': 'application/json',
-              'Content-Type': 'multipart/form-data',
+              'Content-Type': 'application/x-www-form-urlencoded',
               'Authorization': 'Bearer '
             },
           );
