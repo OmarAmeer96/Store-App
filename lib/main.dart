@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -108,14 +109,21 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          http.Response response = await http
-              .post(Uri.parse('https://fakestoreapi.com/products'), body: {
-            'title': 'test product',
-            'price': '13.5',
-            'description': 'lorem ipsum set',
-            'image': 'https://i.pravatar.cc',
-            'category': 'electronic',
-          });
+          http.Response response = await http.post(
+            Uri.parse('https://fakestoreapi.com/products'),
+            body: {
+              'title': 'test product',
+              'price': '13.5',
+              'description': 'lorem ipsum set',
+              'image': 'https://i.pravatar.cc',
+              'category': 'electronic',
+            },
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'multipart/form-data',
+              'Authorization': 'Bearer '
+            },
+          );
 
           print(response.body);
         },
