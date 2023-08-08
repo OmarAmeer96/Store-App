@@ -11,6 +11,7 @@ class UpdateProduct{
   }) async {
     Map<String, dynamic> data = await Api().post(
       url: 'https://fakestoreapi.com/products',
+      token: "hi",
       body: {
         'title': title,
         'price': price,

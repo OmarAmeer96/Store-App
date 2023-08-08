@@ -21,10 +21,10 @@ class CustomCard extends StatelessWidget {
               ),
             ],
           ),
-          child: Card(
+          child: const Card(
             elevation: 6,
             child: Padding(
-              padding: const EdgeInsets.symmetric(
+              padding: EdgeInsets.symmetric(
                 horizontal: 14,
                 vertical: 14,
               ),
@@ -32,19 +32,19 @@ class CustomCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'HandBag LV',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 18,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 3,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         r'$315',
                         style: TextStyle(
